@@ -98,5 +98,40 @@
 
 .sidebar-menu-close {
     display: none;
-  }
-  
+}
+
+@media screen and (max-width: 720pt) {
+    .hidden-mobile {
+        display: none;
+    }
+
+    .sidebar-menu {
+        display: none;
+    }
+
+    .sidebar-menu-open {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        display: flex;
+    }
+
+    .sidebar-menu-close {
+        display: block;
+    }
+
+    .viewstack-header {
+        display: none;
+    }
+
+    .mobile-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 5pt;
+        gap: 5pt;
+    }
+}

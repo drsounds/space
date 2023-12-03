@@ -1,4 +1,3 @@
-
 .loading-overlay {
     position: fixed;
     left: 0;
@@ -28,4 +27,16 @@
 
 .loading-overlay-exit-active {
     opacity: 0;
+}
+
+.loading-screen,
+.error-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: absolute;
+    background: var(--background);
 }
