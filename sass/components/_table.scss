@@ -67,3 +67,7 @@
 .node-table-row:hover .context-menu-button-icon {
     visibility: visible;
 }
+
+.table tr:hover td {
+    background: rgba(127, 127, 127, .1);
+} 

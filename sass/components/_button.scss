@@ -1,30 +1,106 @@
-// Button
-//
-// Base button
-//
-// Example:
-// <button class="button">Button</button>
-//
-// Styleguide Components.button
-
-button {
+button, .button, .btn {
     color: var(--color);
-}
-
-button {
     border: none;
     background: none;
+    font-weight: bold;
+    border-radius: var(--button-border-radius);
+    border: none;
+    text-transform: capitalize;
+    background: transparent; 
+    color: var(--button-color);
+
+    padding: 10pt 20pt;
+
+    &.button-primary {
+        --button-color: var(--primary);
+        --color: var(--primary-color) !important;
+        color: var(--primary-color) !important;
+        font-weight: bold;
+    }
+
+    &.button-success {
+        --button-color: var(--success);
+        --color: white;
+    }
+
+    &.button-danger {
+        --button-color: var(--danger);
+        --color: white;
+    }
+
+    &.button-outline {
+        border: 1px solid rgba(127, 127, 127, .3);
+        color: var(--button-color);
+        border: 1px solid rgba(127, 127, 127, .5) !important;
+        /* box-shadow: 0 2pt 5px rgba(127, 127, 127, .2); */
+    }
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+    }
+    &:active {
+        cursor: pointer;
+        transform: scale(0.98);
+        opacity: 0.5;
+    }
+
+    &.button-shadow {
+        --shadow-color: color-mix(in oklab, transparent 90%, var(--button-color));
+    }
+
+    &.button-default {
+        --button-color: var(--color);
+        --bg: color-mix(in srgb, var(--button-color), var(--background) 95%);
+    }
+
+    &.button-small {
+        padding: 5pt 8pt;
+    }
+    
+    &.button-shadowed {
+        box-shadow: var(--button-color);
+    }
+    
+    &.button-filled {
+        background: var(--button-color);
+        color: white;
+    }
+    
+    &.button-solid {
+        background: rgba(127, 127, 127, 0.1);
+        color: var(--button-color);
+    }
+
+    &.button-3d,
+    &.btn-3d {
+
+        background: linear-gradient(180deg, var(--background), color-mix(in hsl, var(--button-color), hsl(-140deg, 50%, 80%)));
+
+        color: white;
+        --shadow-color: color-mix(in oklab, transparent 50%, var(--button-color));
+        /*border: 1px solid black;*/
+        box-shadow: 0 8px 14px -2pt var(--shadow-color), inset 2px 2px 0 rgba(255, 255, 255, .5), inset -1px -1px color-mix(in oklab, var(--button-color), black 20%);
+        /*border-top: 1px solid color-mix(in oklab, var(--button-color), black 5%);
+        border-left: 1px solid color-mix(in oklab, var(--button-color), black 5%);
+        border-bottom: 1px solid color-mix(in oklab, var(--button-color), black 20%);
+        border-right: 1px solid color-mix(in oklab, var(--button-color), black 20%);*/
+    }
+
+    &.button-cta {
+        --button-color: var(--background-color);
+    }
 }
 
-button,
+ 
+.button,
 .link,
 .text-link,
 .nav-link,
 .a {
     letter-spacing: 1.2pt;
 }
-
-button,
+  
+.button,
 .link,
 .text-link,
 h1,
@@ -36,101 +112,4 @@ label {
     letter-spacing: 1.2px;
 }
 
-button:hover {
-    cursor: pointer;
-    transform: scale(1.02);
-
-}
-
-button:active {
-    cursor: pointer;
-    transform: scale(0.98);
-    opacity: 0.5;
-}
-
-.button-primary {
-    --button-color: var(--primary);
-    --color: var(--primary-color) !important;
-    color: var(--primary-color) !important;
-    font-weight: bold;
-}
-
-.button-success {
-    --button-color: var(--success);
-    --color: white;
-}
-
-.button-danger {
-    --button-color: var(--danger);
-    --color: white;
-}
-
-.button-outline {
-    border: 1px solid rgba(127, 127, 127, .3);
-    color: var(--button-color);
-    border: 1px solid rgba(127, 127, 127, .5) !important;
-    /* box-shadow: 0 2pt 5px rgba(127, 127, 127, .2); */
-}
-
-.button-shadow {
-    --shadow-color: color-mix(in oklab, transparent 90%, var(--button-color));
-}
-
-.button-default {
-    --button-color: var(--color);
-    --bg: color-mix(in srgb, var(--button-color), var(--background) 95%);
-}
-
-.button,
-.btn {
-    font-weight: bold;
-    border-radius: var(--button-border-radius);
-    border: none;
-    text-transform: capitalize;
-    background: transparent;
-    color: var(--button-color);
-
-    padding: 10pt 20pt;
-}
-
-.button-small {
-    padding: 5pt 8pt;
-}
-
-.button-shadowed {
-    box-shadow: var(--button-color);
-}
-
-.button-filled {
-    background: var(--button-color);
-    color: white;
-}
-
-.button-solid {
-    background: rgba(127, 127, 127, 0.1);
-    color: var(--button-color);
-}
-
-.btn {
-    background: transparent;
-    --button-color: var(--background);
-}
-
-.button-3d,
-.btn-3d {
-
-    background: linear-gradient(180deg, var(--background), color-mix(in hsl, var(--button-color), hsl(-140deg, 50%, 80%)));
-
-    color: white;
-    --shadow-color: color-mix(in oklab, transparent 50%, var(--button-color));
-    /*border: 1px solid black;*/
-    box-shadow: 0 8px 14px -2pt var(--shadow-color), inset 2px 2px 0 rgba(255, 255, 255, .5), inset -1px -1px color-mix(in oklab, var(--button-color), black 20%);
-    /*border-top: 1px solid color-mix(in oklab, var(--button-color), black 5%);
-    border-left: 1px solid color-mix(in oklab, var(--button-color), black 5%);
-    border-bottom: 1px solid color-mix(in oklab, var(--button-color), black 20%);
-    border-right: 1px solid color-mix(in oklab, var(--button-color), black 20%);*/
-}
-
-.button-cta {
-    --button-color: var(--background-color);
-}
+ 
