@@ -1,0 +1,30 @@
+
+.stepper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5pt;
+}
+
+.stepper-step {
+    opacity: 0.8;
+}
+
+.stepper-step-current {
+    opacity: 1;
+    color: var(--primary);
+}
+
+.stepper-line {
+    width: 100%;
+    height: 1pt;
+    background: currentColor;
+    visibility: hidden;
+    margin-top: 10pt;
+}
+
+.stepper-step-current .stepper-line {
+    visibility: visible;
+}
+  

@@ -1,0 +1,19 @@
+{
+  "name": "space",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "onchange 'sass/**/*.scss' -- npm run sass && npm run kss",
+    "kss": "kss --config kss-config.json",
+    "sass": "sass sass/main.scss css/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "kss": "^3.1.0",
+    "michelangelo": "^0.8.0",
+    "onchange": "^7.1.0"
+  }
+}

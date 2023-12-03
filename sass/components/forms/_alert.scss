@@ -1,0 +1,32 @@
+
+// Alerts
+//
+// Components are ingredients of our design system. They may be made up of smaller groups of styles.
+//
+// Styleguide Components.forms.alert
+
+// Form control
+//
+// Components are ingredients of our design system. They may be made up of smaller groups of styles.
+//
+// Example: <div class="alert">Info</div>
+
+.alert {
+    background: rgba(127, 127, 127, .3);
+    border-radius: 5pt;
+    color: black;
+    display: grid;
+    padding: 10pt;
+    gap: 8pt;
+    grid-template-columns: 16pt auto;
+}
+
+// Form control
+//
+// Components are ingredients of our design system. They may be made up of smaller groups of styles.
+//
+// Example: <div class="alert alert-info">Info</div>
+
+.alert-info {
+    background: var(--info);
+}

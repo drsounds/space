@@ -1,0 +1,23 @@
+.navbar-black {
+    background: black;
+    color: white;
+}
+.navbar-black a {
+    color: white;
+}
+
+.nav-header .glyph, .sidebar-menu .glyph {
+    filter: invert(1);
+}
+
+.nav-header-sidebar-spacing {
+    width: calc(var(--sidebar-menu-width) );
+    
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    .nav-header .glyph, .sidebar-menu .glyph {
+      filter: invert(1);
+    }
+    
+}

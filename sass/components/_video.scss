@@ -1,0 +1,89 @@
+:root {
+  --player-brand-primary-color: var(--primary);
+  --player-playback-color: var(--player-brand-primary-color) !important;
+  --player-live-color-h: var(--danger-h);
+  --player-live-color-s: var(--danger-s);
+  --player-live-color-l: var(--danger-l);
+  --player-live-color: hsl(var(--player-live-color-h), var(--player-live-color-s), var(--player-live-color-l));
+}
+.video-js {
+  overflow: hidden !important;
+}
+.vjs-live-progress-holder {
+  background: hsl(var(--player-live-color-h), var(--player-live-color-s), calc(var(--player-live-color-l) + 30%));
+  height: 100%;
+  position: absolute; 
+}
+
+.vjs-control-bar {
+  background: transparent !important;
+  opacity: 0.8 !important;
+}
+.vjs-play-progress {
+  background: var(--player-brand-primary-color) !important;
+}
+.vjs-control, .icon {
+  font-size: 14pt !important;
+}
+.icon {
+
+  font-size: 16pt !important;
+}
+.vjs-control {
+  transform: translateY(-16pt) !important;
+}
+.icon {
+  transform: translateY(-8pt) !important;
+}
+.vjs-control {
+  width: 2em !important;
+}
+
+.vjs-vol-3 {
+  transform: translateY(-1pt) !important;
+}
+.vjs-progress-control {
+  transform: translateY(-5pt) !important;
+  position: absolute !important; 
+  bottom: 28pt;
+  left: 0 !important;
+  width: 100% !important;
+}
+.video-js {
+  position: relative !important
+}
+.vjs-remaining-time {
+  flex: 1 !important;
+}
+.vjs-remaining-time-display {
+  text-align: left !important
+}
+.liveedge {
+  position: absolute !important;
+  display: flex  !important;
+  align-items: center !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  transform: translate(-25pt, -45pt) !important;
+}
+.liveedge-title {
+  font-size: 8pt;
+  padding: 3pt 5pt !important;
+  background: var(--danger);
+  color: white; text-transform: uppercase;
+}
+.liveedge-needle {
+  width: 3pt;
+  height: 18pt !important;
+  background: var(--danger);
+}
+progress[value] {
+  color: var(--player-brand-primary-color) !important;
+}
+progress::-webkit-progress-value {
+  background-color: var(--player-brand-primary-color) !important;
+}
+
+.vjs-button {
+  color: rgba(200, 200, 200, .5) !important;
+}

@@ -1,0 +1,19 @@
+body {
+  font-family: "Helvetica" !important;
+  font-size: unset;
+  font-weight: unset;
+}
+ 
+.button-filled {
+  color: color-contrast(var(--button-color) vs black, black, white);
+  text-shadow: 0 1px 0 color-contrast(var(--button-color) vs black, white, black);
+  background: linear-gradient(0deg, color-mix(in srgb, var(--button-color), white 0%), color-mix(in srgb, var(--button-color), white 35%));
+  /*border: 1px solid var(--button-color);*/
+  border: none; 
+}
+.form-control {
+  border-left: 1px solid rgba(127, 127, 127, 1);
+  
+  border-top: 1px solid rgba(127, 127, 127, 1);
+  box-shadow: inset 1px 1px 5px rgba(127, 127, 127, .5);
+} 

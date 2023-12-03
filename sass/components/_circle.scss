@@ -1,0 +1,53 @@
+.circle {
+    width: 60pt;
+    height: 60pt;
+    border-radius: 30pt;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.icon-circle {
+    border-radius: 100pt;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13pt;
+}
+
+.icon-circle-filled {
+    background: var(--button-color);
+    color: var(--color);
+}
+
+.icon-circle-primary {
+    --button-color: var(--primary);
+    --color: white;
+}
+
+.circle {
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8pt;
+    width: 40pt;
+    height: 40pt;
+    background: rgba(127, 127, 127, .2);
+}
+
+.circle-primary {
+    background: var(--primary);
+}
+
+.circle-info {
+    background: var(--primary-light) !important;
+    color: white;
+}

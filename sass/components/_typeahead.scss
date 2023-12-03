@@ -1,0 +1,14 @@
+
+.typeahead-menu {
+  background: Canvas;
+  box-shadow: 0 5pt 12pt rgba(0, 0, 0, .08)
+}
+.typeahead-menu-option {
+  display: grid;
+  grid-template-columns: 16pt 16pt auto 16pt;
+  padding: 5pt;
+  gap: 5pt;
+}
+.typeahead-menu-option:hover {
+  background: rgba(127, 127, 127, .1);
+}

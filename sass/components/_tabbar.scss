@@ -1,0 +1,77 @@
+.tab-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 28pt;
+    margin: 10pt 0;
+}
+
+.tab-bar-tab {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8pt;
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0.8;
+
+}
+
+.tab-bar-tab:hover {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.tab-bar-tab-active {
+    font-weight: bold;
+    color: black;
+    opacity: 1;
+}
+
+.tab-bar-tab-underline {
+    width: 10pt;
+    height: 1pt;
+    background: CanvasText;
+    visibility: hidden;
+}
+
+.nav-tabbar {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, .1);
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10pt;
+    background: linear-gradient(0deg, black, transparent);
+    z-index: 100;
+}
+
+.nav-tabbar .nav-tabbar-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-tabbar-tab-cta {
+    transform: translateY(20pt);
+
+}
+
+.nav-tabbar-tab-cta-icon {
+    background: var(--primary);
+    color: black;
+    border-radius: 100%;
+    padding: 12pt;
+    transform: translateY(-20pt);
+}
+
+@media screen and (max-width: 120pt) {
+    .nav-tabbar {
+        display: flex;
+    }
+}

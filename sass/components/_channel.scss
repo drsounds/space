@@ -1,0 +1,28 @@
+
+.channel-item {
+    background: rgba(127, 127, 127, .05);
+    opacity: 0.3;
+    overflow: hidden;
+  }
+  .channel-item-on-air {
+    opacity: 0.8;
+    background: rgba(127, 127, 127, .05);
+  }
+  .channel-item-active {
+    opacity: 1;
+    background: rgba(127, 127, 127, .05);
+  }
+  
+  .channel-item-body {
+    padding: 5pt;
+  }
+  
+  .channel-screen {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: rgba(127, 127, 127, .1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }

@@ -1,0 +1,70 @@
+// Components
+//
+// Components are ingredients of our design system. They may be made up of smaller groups of styles.
+//
+// Styleguide Components.card
+
+// Card
+//
+// Base card
+//
+// Example: <div class="card"><div class="card-header"></div><div class="card-content">Test</div></div>
+
+.card {
+    transition: box-shadow 3s; 
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-radius: 3pt;
+}
+
+.card:hover {
+    box-shadow: 0 2pt 12pt rgba(127, 127, 127, .2);
+    transform: scale(1);
+}
+.card-header {
+      aspect-ratio: 16/8;
+      background: rgba(127, 127, 127, .5);
+}
+
+// Card bg
+//
+// Base card
+//
+// Example: <div class="card-bg"><div class="card"><div class="card-header"></div><div class="card-content">Test</div></div></div>
+
+.card-bg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--card-background);
+}
+
+// Card title
+//
+// Card title
+//
+// Example: <div class="card-bg"><div class="card"><div class="card-header"></div><div class="card-title">Card title</div><div class="card-content">Test</div></div></div>
+
+.card-title { 
+    bottom: 20pt;
+    width: 100%;
+}
+
+// Card title
+//
+// Card title
+//
+// Example: <div class="card-bg"><div class="card"><div class="card-header"></div><div class="card-title">Card title</div><div class="card-content">Test</div></div></div>
+
+.card-content {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}

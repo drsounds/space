@@ -1,0 +1,40 @@
+.nav-link {
+    opacity: .9;
+    text-transform: uppercase;
+}
+
+.nav-link-active {
+    opacity: 1;
+    font-weight: bold !important;
+}
+
+.link:focus {
+    border: 2pt solid CanvasText;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.text-link {
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.nav-link {
+    cursor: default;
+    text-decoration: none !important;
+}
+
+.link.sidebar-menuitem:hover {
+    text-decoration: none !important;
+}

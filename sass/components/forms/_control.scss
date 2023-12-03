@@ -1,0 +1,106 @@
+
+// Form control
+//
+// Components are ingredients of our design system. They may be made up of smaller groups of styles.
+//
+// Styleguide Components.forms.controls
+
+// Form control
+//
+// Components are ingredients of our design system. They may be made up of smaller groups of styles.
+//
+// Example: <div class="form-control"><input type="text" placeholder="Search"></div>
+
+.form-control {
+    background: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    grid-template-columns: 16pt auto 16pt;
+    padding: 8pt 15pt;
+    border-radius: var(--form-control-border-radius);
+    border: 1px 
+}
+
+// Form control
+//
+// Components are ingredients of our design system. They may be made up of smaller groups of styles.
+//
+// Example: <div class="form-control form-control-bordered"><input type="text" placeholder="Search"></div>
+
+.form-control-bordered {
+    border: 1px solid rgba(127,127, 127, .5);
+    box-shadow: 0 8px 14px -2pt  var(--shadow-color), 0 2px 5pt rgba(127, 127, 127, .1), inset -1px -1px 0px rgba(127, 127, 127, .3), inset 1px 1px 0 rgba(200, 200, 200, .2);
+}
+
+// Form control success
+//
+// Components are ingredients of our design system. They may be made up of smaller groups of styles.
+//
+// Example: <div class="form-control form-control-bordered form-control-success"><input type="text" placeholder="Search"></div>
+
+.form-control.form-control-success {
+    border: 1pt solid var(--success);
+}
+
+// Form control success
+//
+// Components are ingredients of our design system. They may be made up of smaller groups of styles.
+//
+// Example: <div class="form-control form-control-bordered form-control-danger"><input type="text" placeholder="Search"></div>
+
+.form-control.form-control-danger {
+    border: 1pt solid var(--danger);
+}
+
+// Form control success
+//
+// Components are ingredients of our design system. They may be made up of smaller groups of styles.
+//
+// Example: <div class="form-control form-control-bordered form-control-warning"><input type="text" placeholder="Search"></div>
+
+.form-control.form-control-warning {
+    border: 1pt solid var(--warning);
+}
+
+// Form control success
+//
+// Components are ingredients of our design system. They may be made up of smaller groups of styles.
+//
+// Example: <div class="form-control form-control-bordered form-control-info"><input type="text" placeholder="Search"></div>
+
+.form-control.form-control-info {
+    border: 1pt solid var(--info);
+}
+
+// Form control success
+//
+// Components are ingredients of our design system. They may be made up of smaller groups of styles.
+//
+// Example: <div class="form-control form-control-bordered form-control-primary"><input type="text" placeholder="Search"></div>
+
+.form-control.form-control-primary {
+    border: 1pt solid var(--primary);
+}
+
+.form-control input {
+    color: black !important
+}
+
+.form-control select {
+    width: 100%;
+    flex: 1;
+}
+
+.form-control-readonly {
+    background: rgba(127, 127, 127, .2) !important;
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+  
+.form-control:has(:focus) {
+    outline: none;
+    border: 1px solid CanvasText;
+}
+  
