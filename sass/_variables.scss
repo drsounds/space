@@ -36,10 +36,10 @@
     --danger-h: 0; 
     --danger-s: 100%;
     --danger-l: 50%;
-    --primary: hsl(var(--gold-h), var(--gold-s), var(--gold-l)); /* #0022ff;'/ /* #09f7cf */;
+    --primary:  #00aaff;
     --primary-light: color-mix(in srgb, var(--primary), #cccccc 30%);
     --info: #0d72ea;
-    --secondary: #22aaff;
+    --secondary: #33aa33;
     --success: hsl(var(--success-h), var(--success-s), var(--success-l));
     --warning: hsl(var(--warning-h), var(--warning-s), var(--warning-l));
     --danger: hsl(var(--danger-h), var(--danger-s), var(--danger-l));

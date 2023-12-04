@@ -8,7 +8,7 @@
 //
 // Components are ingredients of our design system. They may be made up of smaller groups of styles.
 //
-// Styleguide Components
+// Styleguide Utils
 
 * {
   letter-spacing: 0cm !important;
@@ -199,7 +199,7 @@ main {
   box-shadow: 0 8px 14px -2pt  var(--shadow-color);
 }
 
-nav {
+.nav {
   background: var(--nav-background);
   color: var(--nav-foreground);
 }

@@ -2976,7 +2976,7 @@ main {
   box-shadow: 0 8px 14px -2pt var(--shadow-color);
 }
 
-nav {
+.nav {
   background: var(--nav-background);
   color: var(--nav-foreground);
 }

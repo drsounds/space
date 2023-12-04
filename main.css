@@ -38,10 +38,10 @@
   --danger-h: 0;
   --danger-s: 100%;
   --danger-l: 50%;
-  --primary: hsl(var(--gold-h), var(--gold-s), var(--gold-l)); /* #0022ff;'/ /* #09f7cf */
+  --primary: #00aaff;
   --primary-light: color-mix(in srgb, var(--primary), #cccccc 30%);
   --info: #0d72ea;
-  --secondary: #22aaff;
+  --secondary: #33aa33;
   --success: hsl(var(--success-h), var(--success-s), var(--success-l));
   --warning: hsl(var(--warning-h), var(--warning-s), var(--warning-l));
   --danger: hsl(var(--danger-h), var(--danger-s), var(--danger-l));
@@ -256,7 +256,9 @@ button, .button, .btn {
   border: none;
   text-transform: capitalize;
   background: transparent;
-  color: var(--button-color);
+  color: black;
+  box-shadow: 0 1pt 1pt 0pt color-mix(in srgb, black, transparent 90%);
+  border: 1pt solid color-mix(in oklab, var(--button-color), black 3%);
   padding: 10pt 20pt;
 }
 button.button-primary, .button.button-primary, .btn.button-primary {
@@ -264,6 +266,9 @@ button.button-primary, .button.button-primary, .btn.button-primary {
   --color: var(--primary-color) !important;
   color: var(--primary-color) !important;
   font-weight: bold;
+}
+button.button-secondary, .button.button-secondary, .btn.button-secondary {
+  --button-color: var(--secondary);
 }
 button.button-success, .button.button-success, .btn.button-success {
   --button-color: var(--success);
@@ -302,19 +307,42 @@ button.button-shadowed, .button.button-shadowed, .btn.button-shadowed {
   box-shadow: var(--button-color);
 }
 button.button-filled, .button.button-filled, .btn.button-filled {
-  background: var(--button-color);
   color: white;
+  background: var(--button-color);
+  border: none;
+}
+button.button-semi-3d, .button.button-semi-3d, .btn.button-semi-3d {
+  background: linear-gradient(0deg, color-mix(in srgb, var(--button-color), white 50%), color-mix(in srgb, var(--button-color), white 60%));
+  box-shadow: 0 2pt 2pt 0pt color-mix(in srgb, black, transparent 90%);
+  border-bottom: 1px solid color-mix(in oklab, var(--button-color), white 20%);
+  border-top: 1px solid color-mix(in oklab, var(--button-color), white 50%);
+  border-left: 1px solid color-mix(in oklab, var(--button-color), white 40%);
+  border-right: 1px solid color-mix(in oklab, var(--button-color), white 40%);
+  border-bottom: 1pt solid color-mix(in oklab, var(--button-color), black 10%);
+  color: white !important;
+}
+button.button-precise, .button.button-precise, .btn.button-precise {
+  background: var(--primary);
+  box-shadow: 0 0pt 0 0pt var(--primary);
+  border: 2pt solid black;
+}
+button.button-gradient, .button.button-gradient, .btn.button-gradient {
+  background: linear-gradient(-45deg, var(--button-color), hsl(from var(--button-color) calc(h + 90) s l)) !important;
+  border: none;
+  box-shadow: 0 8pt 5pt -5pt color-mix(in srgb, var(--primary), transparent 50%);
+  color: white !important;
 }
 button.button-solid, .button.button-solid, .btn.button-solid {
   background: rgba(127, 127, 127, 0.1);
   color: var(--button-color);
 }
 button.button-3d, button.btn-3d, .button.button-3d, .button.btn-3d, .btn.button-3d, .btn.btn-3d {
-  background: linear-gradient(180deg, var(--background), color-mix(in hsl, var(--button-color), hsl(220, 50%, 80%)));
-  color: white;
+  background: linear-gradient(180deg, var(--button-color), color-mix(in hsl, var(--button-color), white 10%));
+  border: none;
+  color: white !important;
   --shadow-color: color-mix(in oklab, transparent 50%, var(--button-color));
   /*border: 1px solid black;*/
-  box-shadow: 0 8px 14px -2pt var(--shadow-color), inset 2px 2px 0 rgba(255, 255, 255, 0.5), inset -1px -1px color-mix(in oklab, var(--button-color), black 20%);
+  box-shadow: 0 8px 14px -2pt var(--shadow-color), inset 0px 1px 0 rgba(255, 255, 255, 0.5), inset -1px -1px color-mix(in oklab, var(--button-color), black 20%);
   /*border-top: 1px solid color-mix(in oklab, var(--button-color), black 5%);
   border-left: 1px solid color-mix(in oklab, var(--button-color), black 5%);
   border-bottom: 1px solid color-mix(in oklab, var(--button-color), black 20%);
@@ -3039,7 +3067,7 @@ main {
   box-shadow: 0 8px 14px -2pt var(--shadow-color);
 }
 
-nav {
+.nav {
   background: var(--nav-background);
   color: var(--nav-foreground);
 }
