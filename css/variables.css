@@ -48,7 +48,7 @@
     --info: #0d72ea;
     --secondary: #33aa33;
     --success: hsl(var(--success-h), var(--success-s), var(--success-l));
-    --warning: hsl(var(--warning-h), var(--warning-s), var(--warning-l));
+    --warning: #ff8800;
     --danger: hsl(var(--danger-h), var(--danger-s), var(--danger-l));
     --form-control-border-radius: 3pt;
     --modal-background: white;

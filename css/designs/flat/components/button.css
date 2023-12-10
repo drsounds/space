@@ -9,7 +9,7 @@
         color: white;
     }
     .button-outline, .btn-outline, .btn-bordered, .button-bordered {
-        border: var(--btn-color);
+        border: 1px solid var(--color);
         color: var(--btn-color);
     }
 }

@@ -5,6 +5,15 @@
         color: var(--btn-color);
         padding: 10pt 30pt;
         border-radius: var(--btn-border-radius);
+        font-weight: 700;
+    }
+    .button-outline, .btn-outline, .btn-bordered, .button-bordered {
+        border: var(--btn-color);
+        color: var(--btn-color);
+    }
+    .button-alt, .btn-alt  {
+        background: color-mix(in srgb, var(--btn-color), transparent 90%) !important;
+        color: var(--btn-color);
     }
     .btn:hover, .button:hover {
         cursor: pointer;
