@@ -4,7 +4,11 @@
     .btn-bordered, .button-bordered, .btn-outline, .button-outline {
         border: 1px solid var(--btn-color);
     }
-    .btn-filled, .button-filled, .btn-solid, .button-solid {
+    .btn-outline {
+        border-bottom: 1pt solid color-mix(in srgb, var(--btn-color), black 30%);
+
+    } 
+    .btn-filled, .button-filled, .btn-solid, .button-solid, select.form-control {
         background: linear-gradient(180deg, var(--btn-color), color-mix(in hsl, var(--btn-color), white 10%));
         border: none;
         color: white;
@@ -25,10 +29,13 @@
         box-shadow: inset 0 1px 0px color-mix(in srgb, var(--btn-color), white 50%), 0 1px 1px color-mix(in srgb, black, transparent 90%);
         color: white;
         text-shadow: 0 -1pt 0 rgba(0, 0, 0, .3);
-    }
-    .button-alt, .btn-alt  {
-        background: linear-gradient(color-mix(in srgb, var(--btn-color), white 90%), color-mix(in srgb, var(--btn-color), white 80%)) !important;
+    } 
+    .button-alt, .btn-alt {
+        background: linear-gradient(color-mix(in srgb, var(--btn-color), white 80%), color-mix(in srgb, var(--btn-color), white 70%)) !important;
         color: var(--btn-color);
+        border: 1pt solid color-mix(in srgb, var(--btn-color), transparent 70%);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5);
+
     }
     
 }

@@ -1,0 +1,8 @@
+.sp-modern { 
+    .well { 
+        background: linear-gradient(-45deg, color-mix(in srgb, var(--well-color), transparent 90%), color-mix(in hsl, hsl(from var(--well-color) calc(h + 90) s l), transparent 90%));
+        border: none;
+        box-shadow: 0 8pt 5pt -5pt color-mix(in srgb, var(--well-color), transparent 90%);
+        color: var(--well-color);
+    }
+}

@@ -1,0 +1,26 @@
+.sp-skeudomorph input, .sp-skeudomorph select, .sp-skeudomorph textarea {
+    border: none;
+    background: transparent;
+    padding: 1pt 5pt;
+}
+.sp-skeudomorph input:focus, .sp-skeudomorph select:focus, .sp-skeudomorph textarea:focus {
+    outline: none;
+}
+.sp-skeudomorph .form-control {
+    background: var(--background);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    grid-template-columns: 16pt auto 16pt;
+    padding: 8pt 15pt;
+    border-radius: var(--form-control-border-radius);
+    border: 1px;
+    border: 1pt solid color-mix(in srgb, var(--color), transparent 50%);
+    box-shadow: inset 2pt 2pt 2pt 0 rgba(0, 0, 0, .1);
+    border-left: 1pt solid color-mix(in srgb, var(--color), white 30%);
+    border-top: 1pt solid color-mix(in srgb, var(--color), white 30%);
+}
+.sp-skeudomorph .form-control:has(:focus), .sp-skeudomorph select:focus {
+    border: 1pt solid var(--primary);
+    box-shadow: inset 2pt 2pt 2pt 0 rgba(0, 0, 0, .1), 0 0 5pt var(--primary);
+}

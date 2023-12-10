@@ -1,0 +1,4 @@
+
+.sp-core .form-control:has(:focus), .sp-core select:focus {
+    border: 2pt solid var(--color);
+}

@@ -1,0 +1,13 @@
+.sp-core {
+    .table {
+        border-collapse: collapse;
+    }
+    .table th {
+        border-bottom: 1px solid color-mix(in srgb, var(--color), transparent 80%);
+        color: var(--heading-color);
+    }
+    .table td, .table th {
+        padding: 10pt;
+        border-bottom: 1px solid  color-mix(in srgb, var(--color), transparent 80%);
+    }
+}

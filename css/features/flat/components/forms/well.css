@@ -1,0 +1,16 @@
+.sp-flat {
+    .well { 
+        border: none;
+        color: white; 
+        --shadow-color: color-mix(in oklab, transparent 50%, var(--well-color));
+        /*border: 1px solid black;*/
+         /*border-top: 1px solid color-mix(in oklab, var(--button-color), black 5%);
+        border-left: 1px solid color-mix(in oklab, var(--button-color), black 5%);
+        border-bottom: 1px solid color-mix(in oklab, var(--button-color), black 20%);
+        border-right: 1px solid color-mix(in oklab, var(--button-color), black 20%);*/
+        border-radius: var(--button-border-radius); 
+        background: color-mix(in srgb, var(--well-color), transparent 80%);
+        font-weight: bold;
+        color: var(--well-color); 
+    }
+}

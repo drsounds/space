@@ -1,5 +1,7 @@
-@import url("./designs/core/index.css");
-@import url("./designs/skeudomorph/index.css");
-@import url("./designs/modern/index.css");
-@import url("./designs/flat/index.css");
+@import url("./features/core/index.css");
+@import url("./features/modern/index.css");
+@import url("./features/flat/index.css");
+@import url("./features/skeudomorph/index.css");
 @import url("./variables.css");
+@import url("./features/colorful/index.css");
+@import url("./features/you/index.css");

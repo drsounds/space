@@ -43,7 +43,7 @@
     --danger-h: 0; 
     --danger-s: 100%;
     --danger-l: 50%;
-    --primary:  #009c00;
+    --primary:  #0077ff;
     --primary-light: color-mix(in srgb, var(--primary), #cccccc 30%);
     --info: #0d72ea;
     --secondary: #33aa33;
@@ -66,17 +66,22 @@
     accent-color: var(--primary);
     --area-color: color-mix(in srgb, var(--primary), transparent 80%);
     --area-fill: linear-gradient(90deg, var(--area-color), transparent);
+    --alert-border-radius: 5pt;
+    --well-color: #888;
 }
 
-.dark {
+.sp-dark {
     --background: #111;
-    --color: #eee;
+    --color: #aaa;
+    --heading-color: white;
+    color-scheme: dark;
 }
 
 body {
     font-family: var(--font-family);
     font-weight: var(--font-weight);
     color: var(--color);
+    background: var(--background);
 }
 
 h1, h2, h3, h4 {

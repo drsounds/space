@@ -1,0 +1,20 @@
+.sp-core {
+    .well {
+        border-radius: 5pt !important;
+    }
+    .well-content, .well-body {
+        padding: 10pt;
+    }
+    .well-primary {
+        --well-color: var(--primary);
+    }
+    .well-danger {
+        --well-color: var(--danger);
+    }
+    .well-warning {
+        --well-color: var(--warning);
+    }
+    .well-info {
+        --well-color: var(--info);
+    }
+}

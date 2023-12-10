@@ -1,0 +1,3 @@
+.sp-colorful {
+    --background: color-mix(in srgb, var(--primary), transparent 90%) !important;
+} 

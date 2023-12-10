@@ -1,0 +1,8 @@
+.sp-you {
+    --background: color-mix(in srgb, var(--primary), transparent 90%) !important;
+    color: color-mix(in srgb, var(--color), var(--primary) 20%) !important;
+}
+.sp-dark {
+    --background: color-mix(in srgb, var(--primary), black 90%) !important;
+
+}

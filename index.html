@@ -4,37 +4,97 @@
         <title>Space CSS Theme</title>
         <link rel="stylesheet" href="css/index.css">
         <script>
+
+            const features = ['core', 'skeudomorph', 'flat', 'modern', 'colorful', 'you', 'dark']
+
             function handleSelectDesign(event) {
                 setDesign(event.target.value)
             }
-            function setDesign(value) {
-                document.querySelector("#paradigm").setAttribute('class', 'sp-' + value)
-                document.querySelector('#designSelect').value = value
-
-                localStorage.setItem('design', value)
+            function setFeature(feature, isActive = undefined) {
+                className = 'sp-' + feature
+                const featuresDiv = document.querySelector("#features")
+                const featureCheckBox = document.querySelector('input[name="' + feature + '"]')
+                if (typeof isActive == 'undefined') {
+                    if (featuresDiv.classList.contains(className)) {
+                        featureCheckBox.checked = true
+                        featuresDiv.classList.add(className)
+                    } else {
+                        featureCheckBox.checked = false
+                        featuresDiv.classList.remove(className)
+                    }
+                }
+                if (isActive) {
+                    featureCheckBox.checked = true
+                    featuresDiv.classList.add(className)
+                } else {
+                    featureCheckBox.checked = false
+                    featuresDiv.classList.remove(className)
+                }
+                const classNames = featuresDiv.getAttribute('class')
+                console.log(classNames)
+                localStorage.setItem('features', classNames)
             }
+            function setFeatures(classNames) { 
+                const featuresDiv = document.querySelector("#features")
+                featuresDiv.setAttribute('class', 'sp-core ' + classNames) 
+
+                for (let className of classNames.split(' ')) {
+                    const featureCheckBox = document.querySelector('input[name="' + className.split('-')[1] + '"]')
+                    if (featureCheckBox) {
+                        featureCheckBox.checked = featuresDiv.classList.contains(className)
+                    } else {
+                        console.warn("featureCheckBox is null")
+                    }
+                }
+                localStorage.setItem('features', classNames)
+            } 
             function handleLoad(event) {
-                const design = localStorage.getItem('design')
-                
-                setDesign(design)
+                const featureCheckBoxesDiv = document.querySelector('#featureCheckBoxes')
+                featureCheckBoxesDiv.innerHTML = `
+                    ${features.map(feature => (`
+                        <label>
+                            <input type="checkbox" name="${feature}" onchange="handleFeatureCheckboxChange(event)">${feature}
+                        </label>
+                    `)).join(' ')}
+                `
+
+                const featureClassNames = localStorage.getItem('features')
+                 
+                setFeatures(featureClassNames)
+                const primaryColor = localStorage.getItem('primaryColor')
+                if (primaryColor) {
+                    setPrimaryColor(primaryColor)
+                }
+                document.querySelector('input[name="primary"]').value = getComputedStyle(document.body).getPropertyValue("--primary")
+             
+            } 
+
+            function setPrimaryColor(value) {
+                document.body.style.setProperty('--primary', value)
+                document.querySelector('input[name="primary"]').value = getComputedStyle(document.documentElement).getPropertyValue("--primary")
+                localStorage.setItem('primary', value)
+            }
+            function handlePrimaryColorChange(event) {
+                setPrimaryColor(event.target.value)
+            }
+            function handleFeatureCheckboxChange(event) {
+                setFeature(event.target.name, event.target.checked)
             }
             window.addEventListener('load', handleLoad)
         </script>
     </head>
-    <body class="space sp-core">
-        <div id="paradigm" class="sp-skeudomorph">
-            <select id="designSelect" class="form-control" onchange="handleSelectDesign(event)">
-                <option selected value="skeudomorph">Skeudomorph</option>
-                <option value="flat">Flat</option>
-                <option value="modern">Modern</option>
-                <option value="metro">Metro</option>
-            </select>
-            
+    <body id="features" class="space sp-core">
+        <div >  
+            <div id="featureCheckBoxes" style="display: flex; flex-direction: row; align-items: center; gap: 10pt">
+                 
+            </div>
+            <input type="checkbox" id="isColorful" onchange="handleColorfulChange(event)">
+            <input type="color" name="primary" onchange="handlePrimaryColorChange(event)">
             <h1>Introduction</h1>
             <p>Space is a multi paradigm CSS theme like bootstrap that aims to use pure 100% non preprocessed CSS like SCSS and the cutting edge CSS technology.</p>
             <h1>Components</h1>
             <h2>Buttons</h2>
-            <table>
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Attribute</th>
@@ -165,5 +225,34 @@
                     </tr>
                 </tbody>
             </table>
+            <h3>Wells</h3>
+            <table style="width: 100%">
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Primary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="well">
+                                <div class="well-content">
+                                This is a well
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="well well-primary">
+                                <div class="well-content">
+                                This is a well
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Alerts</h3>
+            <div class="alert">Alert</div> 
         </div>
     </body>

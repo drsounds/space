@@ -1,0 +1,19 @@
+.sp-core input, .sp-core select, .sp-core textarea {
+    border: none;
+    background: transparent;
+    padding: 1pt 5pt;
+}
+.sp-core input:focus, .sp-core select:focus, .sp-core textarea:focus {
+    outline: none;
+}
+.sp-core .form-control {
+    background: var(--background);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    grid-template-columns: 16pt auto 16pt;
+    padding: 8pt 15pt;
+    border-radius: var(--form-control-border-radius);
+    border: 1px;
+    border: 1pt solid color-mix(in srgb, var(--color), transparent 50%);
+}

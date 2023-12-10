@@ -9,7 +9,7 @@
         color: white;
     }
     .button-outline, .btn-outline, .btn-bordered, .button-bordered {
-        border: 1px solid var(--color);
+        border: 1px solid color-mix(in srgb, var(--color), transparent 50%);
         color: var(--btn-color);
     }
 }

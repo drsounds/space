@@ -15,8 +15,9 @@ Example: <div class="alert">Info</div>
     border-radius: 5pt;
     color: black;
     display: grid;
-    padding: 10pt;
+    padding: 10pt 20pt;
     gap: 8pt;
+    border-radius: var(--alert-border-radius);
     grid-template-columns: 16pt auto;
 }
 
@@ -29,4 +30,17 @@ Example: <div class="alert">Info</div>
 
 .alert-info {
     background: var(--info);
+}
+
+.alert-primary {
+    --alert-color: var(--primary);
+}
+.alert-danger {
+    --alert-color: var(--danger);
+}
+.alert-warning {
+    --alert-color: var(--warning);
+}
+.alert-info {
+    --alert-color: var(--info);
 }
