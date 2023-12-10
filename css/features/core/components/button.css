@@ -6,6 +6,7 @@
         padding: 10pt 30pt;
         border-radius: var(--btn-border-radius);
         font-weight: 700;
+        cursor: pointer;
     }
     .button-outline, .btn-outline, .btn-bordered, .button-bordered {
         border: var(--btn-color);
@@ -15,20 +16,19 @@
         background: color-mix(in srgb, var(--btn-color), transparent 90%) !important;
         color: var(--btn-color);
     }
-    .btn:hover, .button:hover {
-        cursor: pointer;
-        transform: scale(1.11);
-    }
-    .btn:active, .button:active {
-        cursor: pointer;
-        transform: scale(0.9);
-    }
     .btn-filled, .button-filled {
         background: var(--btn-color);
         color: white;
     }
+    .btn-default, .button-default {
+        --btn-color: #aaa;
+        color: black;
+    }
     .btn-primary, .button-primary {
         --btn-color: var(--primary);
+    }
+    .btn-success, .button-success {
+        --btn-color: var(--success);
     }
     .btn-danger, .button-danger {
         --btn-color: var(--danger);

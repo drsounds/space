@@ -12,4 +12,12 @@
         border: 1px solid color-mix(in srgb, var(--color), transparent 50%);
         color: var(--btn-color);
     }
+    .btn:hover, .button:hover {
+        cursor: pointer;
+        transform: scale(1.01);
+    }
+    .btn:active, .button:active {
+        cursor: pointer;
+        transform: scale(0.99);
+    }
 }
