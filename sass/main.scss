@@ -3,3 +3,10 @@
 @import "layout/index";
 @import "bootstrap.grid";
 @import "utils";
+
+body, .kss-style {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+    color: var(--color);
+}

@@ -92,14 +92,10 @@ button, .button, .btn {
         border: none;
     }
     &.button-semi-3d {
-        background: linear-gradient(-0deg, color-mix(in srgb, var(--button-color), white 50%), color-mix(in srgb, var(--button-color), white 60%));
+        background: linear-gradient(-0deg, color-mix(in srgb, var(--button-color), white 50%), color-mix(in srgb, var(--button-color), white 80%));
         box-shadow: 0 2pt 2pt 0pt color-mix(in srgb, black, transparent 90%);
-        border-bottom: 1px solid color-mix(in oklab, var(--button-color), white 20%);
-        border-top: 1px solid color-mix(in oklab, var(--button-color), white 50%);
-        border-left: 1px solid color-mix(in oklab, var(--button-color), white 40%);
-        border-right: 1px solid color-mix(in oklab, var(--button-color), white 40%);
-        border-bottom: 1pt solid color-mix(in oklab, var(--button-color), black 10%);
-        color: white !important;
+        border: none;
+        color: white;
     }
     &.button-precise {
         background: var(--primary);
@@ -110,7 +106,7 @@ button, .button, .btn {
         background: linear-gradient(-45deg, var(--button-color), hsl(from var(--button-color) calc(h + 90) s l)) !important;
         border: none;
         box-shadow: 0 8pt 5pt -5pt color-mix(in srgb, var(--primary), transparent 50%);
-        color: white !important;
+        color: white;
     }
     
     &.button-solid {
@@ -121,16 +117,7 @@ button, .button, .btn {
     &.button-3d,
     &.btn-3d {
 
-        background: linear-gradient(180deg, var(--button-color), color-mix(in hsl, var(--button-color), white 10%));
-        border: none;
-        color: white !important;
-        --shadow-color: color-mix(in oklab, transparent 50%, var(--button-color));
-        /*border: 1px solid black;*/
-        box-shadow: 0 8px 14px -2pt var(--shadow-color), inset 0px 1px 0 rgba(255, 255, 255, .5), inset -1px -1px color-mix(in oklab, var(--button-color), black 20%);
-        /*border-top: 1px solid color-mix(in oklab, var(--button-color), black 5%);
-        border-left: 1px solid color-mix(in oklab, var(--button-color), black 5%);
-        border-bottom: 1px solid color-mix(in oklab, var(--button-color), black 20%);
-        border-right: 1px solid color-mix(in oklab, var(--button-color), black 20%);*/
+       
     }
 
     &.button-cta {

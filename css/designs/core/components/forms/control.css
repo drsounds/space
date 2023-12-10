@@ -1,0 +1,11 @@
+
+.form-control {
+    background: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    grid-template-columns: 16pt auto 16pt;
+    padding: 8pt 15pt;
+    border-radius: var(--form-control-border-radius);
+    border: 1px;
+}

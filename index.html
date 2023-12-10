@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Space CSS Theme</title>
+        <link rel="stylesheet" href="css/index.css">
+        <script>
+            function handleSelectDesign(event) {
+                setDesign(event.target.value)
+            }
+            function setDesign(value) {
+                document.querySelector("#paradigm").setAttribute('class', 'sp-' + value)
+                document.querySelector('#designSelect').value = value
+
+                localStorage.setItem('design', value)
+            }
+            function handleLoad(event) {
+                const design = localStorage.getItem('design')
+                
+                setDesign(design)
+            }
+            window.addEventListener('load', handleLoad)
+        </script>
+    </head>
+    <body class="space sp-core">
+        <div id="paradigm" class="sp-skeudomorph">
+            <select id="designSelect" class="form-control" onchange="handleSelectDesign(event)">
+                <option selected value="skeudomorph">Skeudomorph</option>
+                <option value="flat">Flat</option>
+                <option value="modern">Modern</option>
+                <option value="metro">Metro</option>
+            </select>
+            
+            <h1>Introduction</h1>
+            <p>Space is a multi paradigm CSS theme like bootstrap that aims to use pure 100% non preprocessed CSS like SCSS and the cutting edge CSS technology.</p>
+            <h1>Components</h1>
+            <h2>Buttons</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Primary</th>
+                        <th>Success</th>
+                        <th>Info</th>
+                        <th>Danger</th>
+                        <th>Warning</th>
+                        <th>Danger</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        Core
+                    </td>
+                    <td>
+                        <button class="btn">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-success">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-info">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-warning">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger">Button</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Outline
+                    </td>
+                    <td>
+                        <button class="btn btn-outline">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-outline btn-primary">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-outline btn-success">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-outline btn-info">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-outline btn-warning">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-outline btn-danger">Button</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Filled
+                    </td>
+                    <td>
+                        <button class="btn btn-filled">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-filled btn-primary">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-filled btn-success">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-filled btn-info">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-filled btn-warning">Button</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-filled btn-danger">Button</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>

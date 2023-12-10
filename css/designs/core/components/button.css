@@ -1,0 +1,33 @@
+.sp-core {
+    .btn, .button {
+        border: none;
+        background: none;
+        color: var(--btn-color);
+        padding: 10pt 30pt;
+        border-radius: var(--btn-border-radius);
+    }
+    .btn:hover, .button:hover {
+        cursor: pointer;
+        transform: scale(1.11);
+    }
+    .btn:active, .button:active {
+        cursor: pointer;
+        transform: scale(0.9);
+    }
+    .btn-filled, .button-filled {
+        background: var(--btn-color);
+        color: white;
+    }
+    .btn-primary, .button-primary {
+        --btn-color: var(--primary);
+    }
+    .btn-danger, .button-danger {
+        --btn-color: var(--danger);
+    }
+    .btn-warning, .button-warning {
+        --btn-color: var(--warning);
+    }
+    .btn-info, .button-info {
+        --btn-color: var(--info);
+    }
+}

@@ -1,0 +1,15 @@
+.sp-flat {
+    .btn, .button {
+        background: var(--background);
+        color: var(--btn-color);
+       
+    }
+    .button-filled, .btn-filled, .btn-solid, .button-solid {
+        background: var(--btn-color);
+        color: white;
+    }
+    .button-outline, .btn-outline, .btn-bordered, .button-bordered {
+        border: var(--btn-color);
+        color: var(--btn-color);
+    }
+}
