@@ -1,0 +1,18 @@
+
+.button-filled {
+    color: color-contrast(var(--btn-color) vs black, black, white);
+    text-shadow: 0 1px 0 color-contrast(var(--btn-color) vs black, white, black);
+    background: linear-gradient(45deg, color-mix(in srgb, var(--btn-color), white 0%), color-mix(in srgb, var(--btn-color), blue 35%));
+    /*border: 1px solid var(--button-color);*/
+    border: none; 
+    color: white; 
+}
+.button-filled:hover {
+    box-shadow: 0 2pt 9pt var(--primary);
+}
+.button-primary, .background-primary {
+    background: linear-gradient(45deg, color-mix(in srgb, var(--primary), white 30%) 20%, color-mix(in srgb, var(--secondary), black 20%), color-mix(in srgb, var(--secondary), white 35%)/*, color-mix(in srgb, var(--secondary), black )*/);
+}
+.button-danger, .background-primary {
+    background: linear-gradient(45deg, color-mix(in srgb, var(--danger), white  0%) 20%, color-mix(in srgb, var(--danger), blue 35%)/*, color-mix(in srgb, var(--secondary), black )*/);
+}

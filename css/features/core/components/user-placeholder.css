@@ -1,0 +1,14 @@
+.sp-core {
+  .user-placeholder {
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    width: 32;
+    padding: 10pt;
+  
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    border-radius: 50pt;
+    background: var(--primary);
+  }
+}

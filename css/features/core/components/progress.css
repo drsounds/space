@@ -1,0 +1,17 @@
+
+progress {
+    height: 10pt !important;
+    position: relative;
+    background: rgba(127, 127, 127, .1);
+    overflow: hidden;
+    width: 100%;
+    height: 3pt;
+}
+
+.progress-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--player-brand-primary-color);
+}

@@ -1,0 +1,8 @@
+
+.sticky-footer {
+    width: 100%;
+    background: Canvas;
+    border-top: 1pt solid rgba(127, 127, 127, .1);
+    height: auto;
+  }
+  

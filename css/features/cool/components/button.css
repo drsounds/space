@@ -1,0 +1,7 @@
+
+.button-filled, .icon-circle {
+    --gradient1: color-mix(in srgb, var(--primary), #ffffff 10%);
+    --gradient2: color-mix(in srgb, var(--primary), #ffffff);
+    background: linear-gradient(0deg, var(--primary), var(--gradient2)) !important;
+    box-shadow: 0 2pt 5pt var(--gradient2), inset 1px 1px 0 rgba(200, 200, 200, .5), inset -1px -1px 0 rgba(0, 0, 0, .5);
+  }

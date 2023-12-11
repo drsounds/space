@@ -1,0 +1,7 @@
+.label-type {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--primary), white 0%), color-mix(in srgb, var(--secondary), white 35%));
+    -webkit-background-clip: text;  
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}

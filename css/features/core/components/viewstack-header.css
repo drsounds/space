@@ -1,0 +1,9 @@
+.sp-core {
+.viewstack-header {
+    position: fixed; 
+    top: 0;
+    width: stretch; 
+    z-index: 100;
+    background: var(--background);
+}
+}

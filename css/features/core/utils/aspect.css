@@ -1,0 +1,14 @@
+/*
+//
+// Utils
+//
+// Section
+*/
+
+.aspect-ratio-16-9 {
+    aspect-ratio: 16 / 9;
+}
+
+.aspect-ratio-16-6 {
+    aspect-ratio: 16 / 6;
+}

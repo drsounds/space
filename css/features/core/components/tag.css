@@ -1,0 +1,10 @@
+.sp-core {
+    .tag-item {
+        display: flex;
+        flex-direction: row;
+        gap: 8pt;
+        padding: 10pt;
+        border-radius: 5pt;
+        background: rgba(127, 127, 127, .1);
+    }
+}

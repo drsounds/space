@@ -1,0 +1,4 @@
+:root { 
+    /*--background: color-mix(in srgb, var(--primary), #eeef 97%);*/
+    --color: color-mix(in srgb, var(--primary), #555 90%);
+}

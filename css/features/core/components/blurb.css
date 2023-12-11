@@ -1,0 +1,36 @@
+
+.blurb {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.blurb-article img {
+    border: none !important;
+}
+@media screen and (max-width: 720pt) {
+.article-grid {
+    grid-template-columns: auto;
+}
+}
+.blurb-article {
+display: flex;
+align-items: stretch;
+flex-direction: column;
+width: auto;
+
+}
+.blurb-article, .blurb-article * {
+cursor: default;
+}
+.blurb-article-image {
+aspect-ratio: 16/9;
+width: 100%;
+}
+.blurb-article-content {
+padding: 20pt;
+}
+.blurb-article:hover {
+box-shadow: 0 12pt 20pt -5pt rgba(0, 0, 0, .1);
+}

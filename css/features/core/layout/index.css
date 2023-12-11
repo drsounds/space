@@ -1,0 +1,6 @@
+@import url("./flex.css");
+@import url("./grid.css");
+
+.disabled {
+    opacity: 0.5;
+  }

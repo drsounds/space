@@ -1,0 +1,7 @@
+
+.paper {
+    padding: 20pt;
+    border-radius: 10pt;
+    background: var(--background);
+    box-shadow: 0 20pt 28pt -3pt rgba(0, 0, 0, .2);
+}

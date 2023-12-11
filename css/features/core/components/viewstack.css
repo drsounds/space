@@ -1,0 +1,30 @@
+.sp-core {
+.viewstack {
+    display: flex;
+    flex: 1;
+    position: relative;
+    overflow: scroll;
+    flex-direction: column; 
+} 
+
+.viewstack-footer {
+    position: fixed;
+    border-top: 1px solid rgba(127, 127, 127, .2);
+    bottom: 0;
+    width: stretch;
+    padding: 10pt;
+    background: var(--background);
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 13;
+    padding: 13;
+}
+}
+@media screen and (min-width: 720pt) {
+     .sp-core {
+        .viewstack-inner {
+            padding-top: 80pt;
+        } 
+    }
+}

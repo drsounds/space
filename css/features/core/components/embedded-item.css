@@ -1,0 +1,8 @@
+.sp-core {
+    .embedded-item {
+        background: Canvas !important;
+        padding: 20pt;
+        border-radius: 13pt;
+        box-shadow: 0 8pt 12pt rgba(0, 0, 0, .1);
+    }
+}

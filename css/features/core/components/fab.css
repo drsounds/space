@@ -1,0 +1,18 @@
+.fab-container {
+    position: fixed;
+    right: 20pt;
+    bottom: 20pt;
+    z-index: 100;
+}
+
+.fab-container .fab {
+    display: flex;
+    border-radius: 100pt;
+    background: var(--color);
+    color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13pt;
+    padding: 13pt;
+}

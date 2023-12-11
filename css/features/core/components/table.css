@@ -2,12 +2,47 @@
     .table {
         border-collapse: collapse;
     }
+
     .table th {
         border-bottom: 1px solid color-mix(in srgb, var(--color), transparent 80%);
         color: var(--heading-color);
     }
-    .table td, .table th {
+
+    .table td,
+    .table th {
         padding: 10pt;
-        border-bottom: 1px solid  color-mix(in srgb, var(--color), transparent 80%);
+        border-bottom: 1px solid color-mix(in srgb, var(--color), transparent 80%);
+    }
+
+    .node-table-row-appear {
+        padding-top: 0;
+        opacity: 0;
+        max-height: 0;
+    }
+
+    .node-table-row-appear-active {
+        padding-top: unset;
+        opacity: 1;
+        max-height: auto;
+    }
+
+    .node-table-row-enter {
+        opacity: 0;
+        height: 0;
+    }
+
+    .node-table-row-enter-active {
+        opacity: 1;
+        height: auto;
+    }
+
+    .node-table-row-exit {
+        height: 0;
+        opacity: 1;
+    }
+
+    .node-item-exit-active {
+        height: 0;
+        opacity: 0;
     }
 }

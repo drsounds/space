@@ -1,0 +1,11 @@
+
+.button {  
+    --shadow-color: color-mix(in oklab, transparent 90%, var(--btn-color));
+    --bg: color-mix(in srgb, var(--button-color), var(--background) 95%);
+    background: linear-gradient(0deg, var(--bg), var(--background)); 
+    /*border-top: 1px solid color-mix(in oklab, var(--button-color), black 10%);
+    border-left: 1px solid color-mix(in oklab, var(--button-color), black 10%);
+    border-bottom: 1px solid color-mix(in oklab, var(--button-color), black 20%);
+    border-right: 1px solid color-mix(in oklab, var(--button-color), black 20%);*/
+    box-shadow: 0 8px 14px -2pt  var(--shadow-color);
+  }

@@ -1,0 +1,29 @@
+.highlights {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 13;
+    padding: 13;
+}
+
+.highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5;
+    padding: 5;
+    border-radius: 5pt;
+    background: rgba(127, 127, 127, .05);
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 728pt) {
+    .line-chart {
+        display: none;
+    }
+
+    .highlights {
+        display: flex;
+        flex-direction: column;
+    }
+}

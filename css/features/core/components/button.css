@@ -39,4 +39,7 @@
     .btn-info, .button-info {
         --btn-color: var(--info);
     }
+    .button-processing {
+      opacity: 0.9;
+    }    
 }
