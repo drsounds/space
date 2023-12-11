@@ -29,7 +29,17 @@ css/
 
 Note: The scss folder with SCSS files was created in an earlier iteration before I decided to ditch sass and make a pure css native framework. I am in the process of porting these files to native CSS and once it is done the scss folder will be deleted.
 
+# Features
 
+The Space framework is modular in the sense it is built on a set of independent 'sub frameworks' aka 'features' which apply a cerain ui characteristic of styling like Skeudomorphic, flat, etc.
+
+To use a feature, you will need to import the core style and the features you want to use like
+
+<link rel="stylesheet" href="<framework dir>/css/features/<feature id>/index.css">
+
+<div class="sp-<feature id>">
+... Your code
+</div>
 
 # License
 
