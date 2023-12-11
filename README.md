@@ -16,16 +16,18 @@ For those who want the advantage of precompiled CSS it is off course possible to
 # Folder structure
 
 ````
+project_folder/
+  css/
+    index.css
+    variables.css
+    features/
+       <feature name>/
+          index.css
+          variables.css
+          components/
+              index.css
 
-css/
-  index.css
-  variables.css
-  features/
-     <feature name>/
-        index.css
-        variables.css
-        components/
-            index.css
+````
 
 Note: The scss folder with SCSS files was created in an earlier iteration before I decided to ditch sass and make a pure css native framework. I am in the process of porting these files to native CSS and once it is done the scss folder will be deleted.
 
@@ -35,11 +37,34 @@ The Space framework is modular in the sense it is built on a set of independent 
 
 To use a feature, you will need to import the core style and the features you want to use like
 
+````html
+
 <link rel="stylesheet" href="<framework dir>/css/features/<feature id>/index.css">
 
 <div class="sp-<feature id>">
 ... Your code
 </div>
+
+````
+
+## Multiple features
+
+It is possible to combine multiple features like this
+
+````html
+<html>
+  <head>
+    <link rel="stylesheet" href="<framework dir>/css/features/core/index.css">
+    <link rel="stylesheet" href="<framework dir>/css/features/flat/index.css">
+  </head>
+  <body class="sp-core"> 
+       <div class="sp-flat">
+         ... Your code
+       </div> 
+  </body>
+</html>
+
+````
 
 # License
 
