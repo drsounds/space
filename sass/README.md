@@ -1,0 +1,1 @@
+This folder contains older SASS file I used in the very early stage of this project, but they are deprecated and I am working on porting these files to native CSS and move them to the CSS folder, once this is complete this folder will be deleted.
