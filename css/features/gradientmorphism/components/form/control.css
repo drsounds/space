@@ -1,0 +1,9 @@
+
+.form-control {
+    border-left: 1px solid rgba(127, 127, 127, 1);
+    
+    border-top: 1px solid rgba(127, 127, 127, 1);
+    box-shadow: inset 1px 1px 5px rgba(127, 127, 127, .5);
+  } 
+  
+  

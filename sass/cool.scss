@@ -1,39 +1,9 @@
-:root { 
-  /*--background: color-mix(in srgb, var(--primary), #eeef 97%);*/
-  --color: color-mix(in srgb, var(--primary), #555 90%);
-}
 
-body {
-  --gradient-primary: color-mix(in srgb, var(--primary), transparent 95%);
-  /*--background: linear-gradient(0deg, transparent, var(--gradient-primary), transparent);*/
-  min-height: 100%;
-  background-size: 100% 100%;
-  color: var(--color);
-} 
-select, .button-default, .form-control, .search-control {
-  box-shadow: 0 5pt 8pt rgba(0, 0, 0, .1), inset 1px 1px 0px rgba(150, 150, 150, .5), inset -1px -1px 0px rgba(0, 0, 0, .3) !important;
-  border: none !important;
-  padding: 10pt 30pt !important;
-  background: linear-gradient(0deg, #eef, white) !important;
-  
-}
 .search-control {
   background: linear-gradient(0deg, #dde, #eef) !important;
-}
-.button-filled, .icon-circle {
-  --gradient1: color-mix(in srgb, var(--primary), #ffffff 10%);
-  --gradient2: color-mix(in srgb, var(--primary), #ffffff);
-  background: linear-gradient(0deg, var(--primary), var(--gradient2)) !important;
-  box-shadow: 0 2pt 5pt var(--gradient2), inset 1px 1px 0 rgba(200, 200, 200, .5), inset -1px -1px 0 rgba(0, 0, 0, .5);
 }
 .circle, .user-placeholder {
   background: linear-gradient(0deg, var(--primary), var(--gradient2));
   box-shadow: 0 2pt 5pt var(--gradient2), inset 0 1px 0 rgba(255, 255, 255, .5);
 
-}
-
-.paper {
-  margin-top: 30pt;
-  background: rgba(255, 255, 255, .1);
-  box-shadow: 0 20pt 28pt -3pt rgba(0, 0, 0, .2), inset 1px 1px 0px rgba(200, 200, 200, .5), inset -1px -1px 0px rgba(0, 0, 0, .3) !important;
 }

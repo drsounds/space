@@ -1,0 +1,9 @@
+
+
+body {
+--gradient-primary: color-mix(in srgb, var(--primary), transparent 95%);
+/*--background: linear-gradient(0deg, transparent, var(--gradient-primary), transparent);*/
+min-height: 100%;
+background-size: 100% 100%;
+color: var(--color);
+} 
