@@ -16,6 +16,7 @@ For those who want the advantage of precompiled CSS it is off course possible to
 # Folder structure
 
 ````
+
 project_folder/
   css/
     index.css
@@ -63,7 +64,6 @@ It is possible to combine multiple features like this
        </div> 
   </body>
 </html>
-
 ````
 
 # License
