@@ -1,0 +1,20 @@
+.carousel {
+    overflow-x: scroll;
+    scrollbar-width: 0;
+    width: 100%;
+    position: relative;
+    mask-image: linear-gradient(90deg, transparent 0%, black 20%,black 80%, transparent 100%);
+}
+.carouselButtonLeft {
+    position: absolute;
+    left: 28pt;
+    top: 50%;
+}
+.carouselButtonRight {
+    position: absolute;
+    right: 28pt;
+    top: 50%;
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}

@@ -19,6 +19,7 @@
         height: 100%;
         backdrop-filter: blur(8pt);
         z-index: 4;
+        flex: 0 0 200pt;
         display: flex;
         align-items: stretch;
         justify-content: flex-start;

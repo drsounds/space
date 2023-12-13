@@ -4,7 +4,7 @@
         <title>Space CSS Theme</title>
         <link rel="stylesheet" href="css/index.css">
         <script>
-            const features = ['core', 'skeudomorph', 'flat', 'modern', 'colorful', 'you', 'dark', 'rounded']
+            const features = ['core', 'skeudomorph', 'nexus', 'flat', 'modern', 'colorful', 'you', 'dark', 'rounded']
 
             function handleSelectDesign(event) {
                 setDesign(event.target.value)
@@ -39,6 +39,9 @@
 
                 for (let className of classNames.split(' ')) {
                     const featureCheckBox = document.querySelector('input[name="' + className.split('-')[1] + '"]')
+                    if (className === 'sp-core') {
+                        featureCheckBox.setAttribute('disabled', true)
+                    }
                     if (featureCheckBox) {
                         featureCheckBox.checked = featuresDiv.classList.contains(className)
                     } else {
@@ -65,7 +68,6 @@
                     setPrimaryColor(primaryColor)
                 }
                 document.querySelector('input[name="primary"]').value = getComputedStyle(document.body).getPropertyValue("--primary")
-             
             } 
 
             function setPrimaryColor(value) {
@@ -83,174 +85,192 @@
         </script>
     </head>
     <body id="features" class="space sp-core">
-        <div >  
-            <div id="featureCheckBoxes" style="display: flex; flex-direction: row; align-items: center; gap: 10pt">
-                 
+        <div class="app">
+            <div class="sidebar-menu">
+                <div style="padding: 20pt; flex: 1; overflow-y: scroll; display: flex; flex-direction: column; align-items: flex-start; ">
+                    <h1 style="color: white">Space</h1>
+                    <ol>
+                        <li>
+                            <a href="#components">Components</a>
+                            <ol>
+                                <li>
+                                    <a href="#buttons">Buttons</a>
+                                </li>
+                                <li>
+                                    <a href="#forms">Forms</a>
+                                    <ol>
+                                        <li>
+                                            <a href="#input">Input</a>
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div>
+                    <div id="featureCheckBoxes" style="display: flex; flex-direction: column; align-items: flex-start; gap: 10pt">
+                        
+                    </div>
+                    <input type="checkbox" id="isColorful" onchange="handleColorfulChange(event)">
+                    <input type="color" name="primary" onchange="handlePrimaryColorChange(event)">
+                </div>
             </div>
-            <input type="checkbox" id="isColorful" onchange="handleColorfulChange(event)">
-            <input type="color" name="primary" onchange="handlePrimaryColorChange(event)">
-            <h1>Introduction</h1>
-            <p>Space is a multi paradigm CSS theme like bootstrap that aims to use pure 100% non preprocessed CSS like SCSS and the cutting edge CSS technology.</p>
-            <h1>Components</h1>
-            <h2>Buttons</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Attribute</th>
-                        <th>Primary</th>
-                        <th>Success</th>
-                        <th>Info</th>
-                        <th>Warning</th> 
-                        <th>Danger</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            Core
-                        </td>
-                        <td>
-                            <button class="btn">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-primary">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-success">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-info">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-warning">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-danger">Button</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Outline
-                        </td>
-                        <td>
-                            <button class="btn btn-outline">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-outline btn-primary">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-outline btn-success">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-outline btn-info">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-outline btn-warning">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-outline btn-danger">Button</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Filled
-                        </td>
-                        <td>
-                            <button class="btn btn-filled btn-default">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-filled btn-primary">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-filled btn-success">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-filled btn-info">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-filled btn-warning">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-filled btn-danger">Button</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Core
-                        </td>
-                        <td>
-                            <button class="btn btn-alt">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-alt btn-primary">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-alt btn-success">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-alt btn-info">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-alt btn-warning">Button</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-alt btn-danger">Button</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <h2>Inputs</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Attribute</th>
-                        <th>Primary</th>
-                        <th>Success</th>
-                        <th>Info</th>
-                        <th>Danger</th>
-                        <th>Warning</th>
-                        <th>Danger</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            Core
-                        </td>
-                        <td>
-                            <div class="form-control"><input type="text"></div>
-                        </td> 
-                    </tr>
-                </tbody>
-            </table>
-            <h3>Wells</h3>
-            <table style="width: 100%">
-                <thead>
-                    <tr>
-                        <th>Attribute</th>
-                        <th>Primary</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="well">
-                                <div class="well-content">
-                                This is a well
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="well well-primary">
-                                <div class="well-content">
-                                This is a well
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <h3>Alerts</h3>
-            <div class="alert">Alert</div> 
+            <div class="viewstack">
+                <div style="padding: 20pt">
+                    <h1>Introduction</h1>
+                    <p>Space is a multi paradigm CSS theme like bootstrap that aims to use pure 100% non preprocessed CSS like SCSS and the cutting edge CSS technology.</p>
+                    <h1>Components</h1>
+                    <h2>Buttons</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Attribute</th>
+                                <th>Primary</th>
+                                <th>Success</th>
+                                <th>Info</th>
+                                <th>Warning</th> 
+                                <th>Danger</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Core
+                                </td>
+                                <td>
+                                    <button class="btn">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-success">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-info">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-warning">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger">Button</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Outline
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline btn-primary">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline btn-success">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline btn-info">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline btn-warning">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline btn-danger">Button</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Filled
+                                </td>
+                                <td>
+                                    <button class="btn btn-filled btn-default">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-filled btn-primary">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-filled btn-success">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-filled btn-info">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-filled btn-warning">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-filled btn-danger">Button</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Core
+                                </td>
+                                <td>
+                                    <button class="btn btn-alt">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-alt btn-primary">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-alt btn-success">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-alt btn-info">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-alt btn-warning">Button</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-alt btn-danger">Button</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2><a name="forms">Forms</a></h2>
+                    <h3><a name="input">Inputs</a></h3>
+
+                    <div class="form-control"><input type="text" placeholder="Input"></div> 
+                    <h3><a name="select">Select</a></h3>
+                    <select class="form-control" style="width: 100%">
+                        <option value="">Select</option>
+                    </select>
+                    <h3><a name="checkboxes">Checkboxes</a></h3>
+                    <label for="check">
+                        <input type="checkbox"> Check
+                    </label>
+                    <h1><a name="wells">Wells</a></h1> 
+                    <div class="well">
+                        <div class="well-content">
+                        This is a well
+                        </div>
+                    </div> 
+                    <div class="well-content">
+                        This is a well
+                    </div>   
+                    </table>
+                    <h3><a name="alerts">Alerts</a></h3>
+                    <div class="alert">Alert</div> 
+                    <h3><a name="tables">Tables</a></h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Artist</th>
+                                <th>Album</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Name</td>
+                                <td>Artist</td>
+                                <td>Album</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </body>
+</html>

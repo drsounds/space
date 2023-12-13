@@ -1,6 +1,10 @@
 {
-  "name": "space",
+  "name": "@space-ui/core",
   "version": "1.0.0",
+  "repository": {
+    "type": "git", 
+    "url": "https://github.com/drsounds/space-ui"
+  }, 
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,7 +13,7 @@
     "sass": "sass sass/main.scss ./main.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Alexander Forselius <drsounds@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "kss": "^3.1.0",

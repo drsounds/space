@@ -1,17 +1,21 @@
 .sp-core {
     .table {
         border-collapse: collapse;
+        width: 100%;
     }
 
     .table th {
         border-bottom: 1px solid color-mix(in srgb, var(--color), transparent 80%);
-        color: var(--heading-color);
+        color: rgba(127, 127, 127, .5);
     }
 
     .table td,
     .table th {
         padding: 10pt;
         border-bottom: 1px solid color-mix(in srgb, var(--color), transparent 80%);
+    }
+    .table tr:hover td {
+        background: rgba(127, 127, 127, .1);
     }
 
     .node-table-row-appear {

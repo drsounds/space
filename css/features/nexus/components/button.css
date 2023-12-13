@@ -1,0 +1,40 @@
+
+.sp-nexus {
+    input {
+        border: none;
+    }
+    input:focus {
+        outline: none;
+    }
+    .btn, .button { 
+        box-shadow: 2pt 2pt 0 color-mix(in srgb, var(--btn-color), transparent 90%);
+    }
+    .btn-bordered, .btn-outline {
+        border: 2pt solid rgba(127, 127, 127, .5);
+    }
+    .btn-filled, .button-filled, .form-control {
+        border: 2pt solid black;
+    }
+    .btn-alt {
+        box-shadow: none;
+    }
+    .form-control {
+        border: 2pt solid rgba(127, 127, 127, 1);
+        border-radius: 3pt;
+        padding: 5pt;
+        box-shadow: 2pt 2pt 0 color-mix(in srgb, rgba(127, 127, 127, .5), transparent 80%);
+    }
+    .form-control:has(input:focus) {
+        border: 2pt solid var(--primary);
+        box-shadow: 2pt 2pt 0 color-mix(in srgb, var(--primary), transparent 80%);
+
+    }
+    .btn:hover, .button:hover {
+        cursor: pointer;
+        transform: scale(1.01);
+    }
+    .btn:active, .button:active {
+        cursor: pointer;
+        transform: scale(0.99);
+    }
+}

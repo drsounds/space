@@ -10,3 +10,39 @@
     left: 0;
     width: 100%
 }
+
+
+.skeleton-host {
+    mask-image: linear-gradient(90deg, black, transparent, black);
+    animation: skeleton-animation 1s linear infinite;
+    mask-size: 400% 100%;
+    width: auto;
+    height: auto;
+  }
+  .skeleton {
+    mask-image: linear-gradient(90deg, black, transparent, black);
+    animation: skeleton-animation 1s linear infinite;
+    mask-size: 400% 100%;
+    background: rgba(127, 127, 127, .3);
+  }
+  .skeleton-text {
+    mask-image: linear-gradient(90deg, black, transparent, black);
+    animation: skeleton-animation 1s linear infinite;
+    mask-size: 400% 100%;
+  }
+  @keyframes skeleton-animation {
+    0% {
+      mask-position: 0% 0%;
+    } 
+    100% {
+      mask-position: -100% 0%;
+    }
+  }
+  .table-skeleton {
+    opacity: 0.5;
+    filter: blur(8pt);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%
+  }
