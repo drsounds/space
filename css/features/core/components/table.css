@@ -15,7 +15,7 @@
         border-bottom: 1px solid color-mix(in srgb, var(--color), transparent 80%);
     }
     .table tr:hover td {
-        background: rgba(127, 127, 127, .1);
+        background: rgba(127, 127, 127, .1  );
     }
 
     .node-table-row-appear {
