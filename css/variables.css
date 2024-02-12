@@ -4,9 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Figtree:ital,wght@0,300;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 :root { 
-    --font-family: "Inter";
+    --font-family: "Figtree";
     --font-weight: 400;
-    --font-size: 21px;
+    --font-size: 1rem;
     --btn-border-radius: 5pt;
     --btn-color: var(--heading-color);
     --background: #ffffff;
@@ -71,22 +71,23 @@
     --area-fill: linear-gradient(90deg, var(--area-color), transparent);
     --alert-border-radius: 5pt;
     --well-color: #888;
-}
-
-.sp-dark {
-    --background: #111;
-    --color: #aaa;
-    --heading-color: white;
-    color-scheme: dark;
+    --tertiary: #ff00ff;
 }
 
 body {
     font-family: var(--font-family);
     font-weight: var(--font-weight);
+    font-size: var(--font-size);
     color: var(--color);
     background: var(--background);
 }
 
 h1, h2, h3, h4 {
     color: var(--heading-color);
+}
+.sp-dark {
+    --background: #151515;
+    --color: #aaa;
+    --heading-color: white;
+    color-scheme: dark;
 }

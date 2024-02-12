@@ -1,9 +1,3 @@
 @import url("./features/core/index.css");
-@import url("./features/modern/index.css");
-@import url("./features/flat/index.css");
-@import url("./features/skeudomorph/index.css");
+
 @import url("./variables.css");
-@import url("./features/colorful/index.css");
-@import url("./features/rounded/index.css");
-@import url("./features/nexus/index.css");
-@import url("./features/you/index.css");

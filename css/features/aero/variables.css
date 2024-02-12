@@ -1,0 +1,5 @@
+:root {
+    --background-primary: color-mix(in srgb, var(--primary), transparent 90%);
+    --background-secondary: color-mix(in srgb, var(--secondary), transparent 90%);
+    --background: linear-gradient(45deg, var(--background-primary), var(--background-secondary));
+}

@@ -41,5 +41,11 @@
     }
     .button-processing {
       opacity: 0.9;
-    }    
+    }
+    .button:hover, .btn:hover {
+        transform: scale(1.05);
+    }
+    .button:active, .btn:active {
+        transform: scale(0.95);
+    }
 }

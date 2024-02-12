@@ -1,0 +1,8 @@
+
+select, .button-default, .form-control, .search-control {
+    box-shadow: 0 5pt 8pt rgba(0, 0, 0, .1), inset 1px 1px 0px rgba(150, 150, 150, .5), inset -1px -1px 0px rgba(0, 0, 0, .3) !important;
+    border: none !important;
+    padding: 10pt 30pt !important;
+    background: linear-gradient(0deg, #eef, white) !important;
+    
+}

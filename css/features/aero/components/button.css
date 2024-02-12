@@ -1,0 +1,10 @@
+
+.button-filled, .icon-circle {
+    --gradient1: color-mix(in srgb, var(--primary), transparent 80%);
+    --gradient2: color-mix(in srgb, var(--secondary),  transparent 80%);
+    --gradient3: color-mix(in srgb, var(--tertiary),  transparent 80%);
+    background: conic-gradient(from 3.1416rad at 50% 100%, var(--gradient1), var(--gradient2), var(--gradient3)) !important;
+    box-shadow: 0 5pt 5pt rgba(0, 0, 0, .1), inset 3px 3px 5pt rgba(255, 255, 255, .5), inset 0px -1px 0 rgba(0, 0, 0, .2) !important;
+ 
+    color: black !important;
+  }
